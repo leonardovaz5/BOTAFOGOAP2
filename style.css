@@ -1,0 +1,363 @@
+/* style.css */
+
+/* Importando as fontes */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Estilo do body */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #d3d3d3; /* Cor de fundo, caso a imagem não carregue */
+}
+
+
+/* Estilização do escudo */
+.escudo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+/* Estilização do #conteudo */
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+    margin-top: 50px;
+}
+
+/* Estilização do comentário sobre o Botafogo */
+#comentarios {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw; /* Diminuímos um pouco */
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+    max-width: 50%;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 20px; /* Aumentamos o espaço do topo */
+    margin-bottom: 10px; /* Para dar espaçamento entre o comentário e o login */
+    position: relative; /* Removendo o absolute */
+}
+
+
+/* Ajuste na estilização da aba de login */
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 20px; /* Diminui o espaço entre login e comentário */
+}
+
+/* Estilização dos campos de input */
+#login input {
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+    margin-bottom: 25px;
+    padding: 12px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Remover borda do campo de senha */
+#login input[type="password"] {
+    border: none;
+    outline: none;
+}
+
+/* Estilização do botão */
+#login button {
+    width: 100%;
+    max-width: 250px;
+    padding: 16px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+#login button:hover {
+    background-color: gold;
+    transform: scale(1.1);
+}
+
+/* Estilização da palavra "GLORIOSO" */
+#login h5 .dourado {
+    color: gold;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    #comentarios {
+        font-size: 2vw;
+    }
+
+    #login {
+        width: 80%;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header, footer {
+        width: 100%;
+    }
+}
+
+/* styledetalhes.css */
+
+/* Estilo do body */
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("assets/fundo_bandeira.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Elementos filhos no body */
+body h1, body h3, body p, body img, body a {
+    margin: 10px 0;
+}
+
+body a {
+    font-size: 0.8rem;
+    color: white;
+    margin-bottom: 65px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.jogador-stats {
+    margin: 5px 0;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 768px) {
+    body {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    body h1 {
+        font-size: 2.5rem;
+    }
+    body a {
+        font-size: 1.6rem;
+    }
+
+    .jogador-imagem {
+        max-width: 300px;
+        border-radius: 10px;
+    }
+
+    .jogador-stats {
+        margin: 5px 0;
+    }
+}
+@media (max-width: 768px) {
+    .detalhes-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .imagem-detalhes {
+        width: 100%;
+    }
+}
+
+/* stylehome.css */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* Estilos gerais para o corpo */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Estilo do logout */
+#logout {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ffd700;
+    padding: 12px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#logout:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#logout:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.6);
+}
+
+.escudo {
+    width: 70px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+
+/* Filtros */
+#filtros {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#filtros button {
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#filtros button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: gold;
+}
+
+/* Seleção do filtro para dispositivos móveis */
+#selecionaGenero {
+    display: none;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Barra de pesquisa */
+#barraPesquisa {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#pesquisaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+#campoPesquisa {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Container e cards */
+#container {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+    place-items: center;
+    margin-top: 10px;
+}
+
+#container > article {
+    width: 100%;
+    max-width: 30rem;
+    height: 63rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+}
+
+#container > article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+#container > article:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    #container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
